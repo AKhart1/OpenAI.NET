@@ -1,18 +1,45 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    column-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.btnV {
+    top: auto;
+    position: absolute;
+    opacity: 1;
+    transition: 0, 3s;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 4);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
 }
