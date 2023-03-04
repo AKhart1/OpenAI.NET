@@ -2,7 +2,29 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+@*guffy prompts*@
+@*Film still, gangster squirrel counting his money, low angle, shot from below, worms eye view *@
+@*a spraypatined picture on a concrete wall of technicolor jesus fighting black and white satan*@
+@*hovering house in palm springs synthwave, gold hour, cinemetic shot, sunny filters*@
+
+<h1 class="display-4">DALL-E (ASP.NET Core)</h1>
+
+<textarea class = "form-control" id="txt" style="width:500px;" placeholder="Enter your prompr here"></textarea><br/>
+
+<input type="number" value="1" placeholder="Enter quantity" id="quantity"/>
+
+<select id="sel">
+    <option selected>256x256</option>
+    <option>512x512</option>
+    <option>1024x1024</option>
+</select>
+
+<button id="btn">
+    Generate
+</button>
+
+<div id="display" class="wrapper">
 </div>
+
+
+
