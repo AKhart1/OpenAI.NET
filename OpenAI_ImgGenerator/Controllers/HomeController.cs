@@ -1,32 +1,54 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using OpenAI_ImgGenerator.Models;
+﻿using DALLE_webapp.Models;
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System.Diagnostics;
+using System.Text;
+using static DALLE_webapp.Models.ResponseModel;
 
-namespace OpenAI_ImgGenerator.Controllers
+namespace DALLE_webapp.Controllers
 {
+
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        string APIKEY = string.Empty;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IConfiguration conf)
         {
-            _logger = logger;
+            APIKEY = conf.GetSection("OPENAI_API_KEY").Value;
         }
+
 
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        //Home/GenerateImage 
+        [HttpPost]
+        public async Task<IActionResult> GenerateImage([FromBody] Input input)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            var resp = new ReponseModel();
+            using (var client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Clear();
+
+                client.DefaultRequestHeaders.Authorization =
+                    new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", APIKEY);
+                var Message = await client.
+                    PostAsync("https://api.openai.com/v1/images/generations",
+                    new StringContent(JsonConvert.SerializeObject(input),
+                    Encoding.UTF8,
+                    "application/json"
+                    ));
+
+                if (Message.IsSuccessStatusCode)
+                {
+                    var content = await Message.Content.ReadAsStringAsync();
+                    resp = JsonConvert.DeserializeObject<ReponseModel>(content);
+                }
+            }
+            return Json(resp);
         }
     }
 }
