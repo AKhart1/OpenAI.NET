@@ -13,6 +13,7 @@ $(document).ready(() => {
         input.prompt = $('#txt').val();
         input.size = $('#sel').find(":selected").val();
         $.ajax({
+            
             url: '/Home/GenerateImage',
             method: 'post',
             contentType: 'application/json',

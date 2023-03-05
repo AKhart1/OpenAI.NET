@@ -28,7 +28,7 @@ namespace DALLE_webapp.Controllers
         [HttpPost]
         public async Task<IActionResult> GenerateImage([FromBody] Input input)
         {
-            var resp = new ReponseModel();
+            var resp = new ResponseModel();
             using (var client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Clear();
@@ -45,7 +45,7 @@ namespace DALLE_webapp.Controllers
                 if (Message.IsSuccessStatusCode)
                 {
                     var content = await Message.Content.ReadAsStringAsync();
-                    resp = JsonConvert.DeserializeObject<ReponseModel>(content);
+                    resp = JsonConvert.DeserializeObject<ResponseModel>(content);
                 }
             }
             return Json(resp);
