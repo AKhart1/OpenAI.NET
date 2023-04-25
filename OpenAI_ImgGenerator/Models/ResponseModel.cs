@@ -17,11 +17,4 @@
             public long created { get; set; }
             public List<Link>? data { get; set; }
         }
-
-    public class VariationInput
-    {
-        public string? image { get; set; }
-        public short? n { get; set; }
-        public string? size { get; set; }
-    }
 }

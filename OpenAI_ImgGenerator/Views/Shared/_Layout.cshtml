@@ -1,49 +1,51 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100" data-bs-theme="dark">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - OpenAI_ImgGenerator</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/OpenAI_ImgGenerator.styles.css" asp-append-version="true" />
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">OpenAI_ImgGenerator</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+    <title>@ViewData["Title"] - iCreate</title>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - OpenAI_ImgGenerator - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />   
+
+</head>
+<body class="d-flex text-center text-bg-dark">
+    <div class="cover-container d-flex w-100 h-100 p-4 mx-auto flex-column">
+        <header class="mb-auto">
+        <div>
+            <h3 class="float-md-start mb-0">iCreate</h3>
+            <nav class="nav nav-masthead justify-content-center float-md-end">
+                <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Home</a>
+                <a class="nav-link fw-bold py-1 px-0" href="#">About</a>
+            </nav>
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    </header>
+        <div class="container">
+            <video class="video-bg" autoplay muted loop>
+                <source src="~/icons/file.mp4" type="video/mp4" />
+            </video>
+            <img class="img-bg-1" src="~/icons/b1.jpg" />
+            <img class="img-bg-2" src="~/icons/b3.png" />
+            <img class="img-bg-3" src="~/icons/Dopple-Header-01_edited.webp" />
+            <img class="img-bg-4" src="~/icons/c3.jpg" />
+            <img class="img-bg-6" src="~/icons/head.gif" />
+            <img class="img-bg-5" src="~/icons/a1.webp" />
+        </div>
+
+    <main class ="px-3">        
+        @RenderBody()
+    </main>
+
+    <footer class="mt-auto text-white-50">
+        <p class="text-center text-body-secondary">© 2023 Company, Inc</p>
+      </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="~/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+    @await RenderSectionAsync("Scripts", required: false)    
+
+    </div>    
 </body>
 </html>
+
