@@ -4,28 +4,29 @@ html {
     min-height: 100%;
 }
 
-.container{     
+.container {
     margin: 50px;
-    height: 100vh;    
+    height: 100vh;
 }
 
-.video-bg{
+.video-bg {
     position: absolute;
-    width:22%;
-    top:470px;
+    width: 22%;
+    top: 470px;
     left: 20%;
     object-fit: cover;
     z-index: -1;
 }
 
-.img-bg-1{
+.img-bg-1 {
     position: absolute;
-    width:15%;
+    width: 15%;
     top: 230px;
-    left:17%;
+    left: 17%;
     object-fit: cover;
     z-index: -2;
 }
+
 .img-bg-2 {
     position: absolute;
     width: 14%;
@@ -40,9 +41,10 @@ html {
     width: 15%;
     top: 210px;
     left: 76%;
-    object-fit:cover;
+    object-fit: cover;
     z-index: -1;
 }
+
 .img-bg-4 {
     position: absolute;
     width: 20%;
@@ -51,12 +53,13 @@ html {
     object-fit: cover;
     z-index: -2;
 }
+
 .img-bg-5 {
     position: absolute;
     width: 25%;
     top: 180px;
     left: 50%;
-    object-fit:cover;
+    object-fit: cover;
     z-index: -2;
 }
 
@@ -64,7 +67,7 @@ html {
     position: absolute;
     width: 15%;
     top: 55%;
-    left: 57%;    
+    left: 57%;
     z-index: -2;
 }
 
@@ -178,4 +181,3 @@ body {
 .bd-mode-toggle {
     z-index: 1500;
 }
-    
