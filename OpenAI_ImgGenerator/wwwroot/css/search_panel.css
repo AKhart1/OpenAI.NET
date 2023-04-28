@@ -1,0 +1,122 @@
+﻿.panel {
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 10px #ddd;
+    padding: 10px;
+    font-family: 'San-Serif', sans-serif;
+}
+
+.rounded-panel {
+    border-radius: 20px;
+}
+
+.dark-panel {
+    background-color: #262626a6;
+    border: 1px solid #444;
+    box-shadow: 0px 0px 15px #444;
+    color: #5c5c5c;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    border: .1px solid;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s;
+    width: 60%;
+}
+
+    .search-container input[type="text"] {
+        border: none;
+        padding: 10px;
+        font-size: 16px;
+        flex-grow: 1;
+        font-family: 'San-Serif', sans-serif;
+        background-color:transparent;
+        color: white;
+    }
+
+    .search-container button[type="button"] {
+        background-color: #f2f2f2;
+        border: none;
+        color: gray;
+        padding: 10px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+        .search-container button[type="button"]:hover {
+            background-color: #ddd;
+        }
+
+.filters-container {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+    .filters-container select, .filters-container input[type="number"], .filters-container input[type="button"] {
+        border: none;
+        border-radius: 20px;
+        padding: 10px;
+        background-color: #2c2c2c;
+        margin-right: 10px;
+        font-size: 16px;
+        width: 130px;
+        margin-bottom: 10px;
+        color: white;
+        font-family: 'San-Serif', sans-serif;
+    }
+
+        .filters-container select:focus, .filters-container input[type="number"]:focus {
+            outline: none;
+            box-shadow: 0px 0px 5px #ddd;
+        }
+
+    .filters-container input[type="button"] {
+        background-color: #4285f4;
+        border: none;
+        border-radius: 20px;
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: all 0.2s;
+        font-family: 'San-Serif', sans-serif;
+    }
+
+        .filters-container input[type="button"]:hover {
+            background-color: #357ae8;
+        }
+
+/* Responsive styles */
+
+@media screen and (max-width: 600px) {
+    .search-container {
+        flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 10px;
+    }
+
+        .search-container input[type="text"] {
+            margin-bottom: 10px;
+        }
+
+    .filters-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+        .filters-container select, .filters-container input[type="number"], .filters-container input[type="button"] {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+}
