@@ -2,7 +2,9 @@
     ViewData["Title"] = ".NET";
 }
 
-<div class="container">
+<link rel="stylesheet" href="~/css/search_panel.css" />
+
+@*<div class="container">
     <video class="video-bg" autoplay muted loop>
         <source src="~/icons/file.mp4" type="video/mp4" />
     </video>
@@ -13,26 +15,21 @@
     <img class="img-bg-5 deploy-object" src="~/icons/car1.jpg" />
     <img class="img-bg-6" src="~/icons/donut.gif" />
 </div>
+*@
 
-
-<div class="panel rounded-panel dark-panel">
-    <form>
-        <div class="search-container">
-            <input id="txt" type="text" placeholder="Search">
-        </div>
-        <div class="filters-container">
-            <select id="sel">
-                <option selected>256x256</option>
-                <option>512x512</option>
-                <option>1024x1024</option>
-            </select>
-            <input type="number" placeholder="quantity" id="quantity">
-            <input type="button" id="btn" value="Generate">
-        </div>
-    </form>
-</div>
-
-<div id="display" class="col-md-12 row">
+<div>
+    <textarea class="form-control" id="txt" style="width:500px;" placeholder="Enter your prompr here"></textarea><br />
+    <input type="number" value="1" placeholder="Enter quantity" id="quantity" />
+    <select id="sel">
+        <option selected>256x256</option>
+        <option>512x512</option>
+        <option>1024x1024</option>
+    </select>
+    <button id="btn">
+        Generate
+    </button>
+    <div id="display">
+    </div>
 </div>
 
 
