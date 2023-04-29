@@ -11,7 +11,7 @@ body {
     box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
 }
 
-/*About animation*/
+/*About FX*/
 
 .container-about {
     max-width: 600px;
@@ -38,6 +38,71 @@ h1 {
 
     100% {
         transform: translate(0,0);
+    }
+}
+
+/*------------------------------------*/
+
+
+@keyframes slide-left-to-right {
+    from {
+        transform: translateX(-150%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.start-anim-left {
+    animation: slide-left-to-right 1s;
+    position: absolute;
+    width: 15%;
+    top: 8%;
+    left: 60%;
+    transform: translate(0%, 0%);
+}
+
+/*-------------------------------------*/
+
+@keyframes slide-right-to-left{
+    from{
+        transform: translateX(150%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+.start-anim-right{
+    animation: slide-right-to-left 1s;
+    position: absolute;
+    left: 60%;
+    transform: translate(0%,0%);
+}
+
+/*----------------------------------*/
+
+.deploy-object {
+    position: absolute;
+    transform: translate(0%, 0%) rotate(-45deg) scale(0);
+    animation-name: deploy;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes deploy {
+    0% {
+        transform: translate(0%, 0%) rotate(-45deg) scale(0);
+    }
+
+    50% {
+        transform: translate(0%, 0%) rotate(45deg) scale(1.5);
+    }
+
+    100% {
+        transform: translate(0%, 0%) rotate(0deg) scale(1);
     }
 }
 
@@ -85,28 +150,29 @@ h1 {
 
 .img-bg-4 {
     position: absolute;
-    width: 20%;
-    top: 350px;
-    left: 66%;
+    width: 17%;
+    top: 390px;
+    left: 65%;
     object-fit: cover;
     z-index: -2;
 }
 
 .img-bg-5 {
     position: absolute;
-    width: 25%;
-    top: 180px;
-    left: 50%;
+    width: 15%;
+    top: 270px;
+    left: 60%;
     object-fit: cover;
     z-index: -2;
 }
 
 .img-bg-6 {
     position: absolute;
-    width: 15%;
-    top: 55%;
-    left: 57%;
-    z-index: -2;
+    width: 30%;
+    top: 20px;
+    left: 45%;
+    object-fit: cover;
+    z-index: -4;
 }
 
 /* Custom default button */
@@ -114,8 +180,7 @@ h1 {
 .btn-light:hover,
 .btn-light:focus {
     color: #333;
-    text-shadow: none; 
-    /* Prevent inheritance from `body` */
+    text-shadow: none;    
 }
 
 .cover-container {
