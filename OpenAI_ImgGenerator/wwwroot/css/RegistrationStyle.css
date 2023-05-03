@@ -8,10 +8,9 @@ body {
     color: #fff;
 }
 
-.signInTxt{
+.Login {
     display: block;
     margin: 60px;
-
 }
 
 .msg{
@@ -28,7 +27,6 @@ body {
     height: 90vh;
 }
 
-
 .logo {
     position: relative;
     width: 100%;
@@ -36,11 +34,11 @@ body {
     text-align: center;
 }
 
-.logo img {
-    position: relative;
-    width: 90%;
-    top: 40px;
-}
+    .logo img {
+        position: relative;
+        width: 90%;
+        top: 40px;
+    }
 
 h1 {
     font-size: 1.5rem;
@@ -48,6 +46,7 @@ h1 {
 }
 
 input[type="text"],
+input[type="email"],
 input[type="password"] {
     display: block;
     width: 100%;
@@ -58,17 +57,6 @@ input[type="password"] {
     background-color: #404247;
     color: #fff;
     font-size: 1rem;
-}
-
-input[type="checkbox"] {
-    display: inline-block;
-    margin-right: 0.5rem;
-}
-
-label[for="remember"] {
-    font-size: 0.9rem;
-    display: inline-block;
-    margin-bottom: 1rem;
 }
 
 input[type="submit"] {

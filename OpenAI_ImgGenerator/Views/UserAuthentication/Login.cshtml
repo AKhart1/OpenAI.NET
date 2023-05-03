@@ -1,0 +1,38 @@
+﻿@model OpenAI_ImgGenerator.Models.DTO.LoginModel;
+
+
+@{
+	Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login</title>
+	<link rel="stylesheet" href="~/css/LoginStyle.css" />
+</head>
+<body>
+	<div class="container">
+		<div class="logo">
+			<img src="~/icons/logo_Final.png">
+		</div>
+		<h1>Log In</h1>
+		<form asp-action="Login" method="post">
+			<input type="text" id="username" placeholder="Username" asp-for="Username" required>
+			<input type="password" id="password" placeholder="Password" asp-for="Password" required>
+			<input type="submit" value="Login">
+			<a href="/UserAuthentication/Registration" class="signInTxt">Not a user? sign up</a>
+
+			@if (TempData["msg"] != null)
+			{
+				<div class="msg">
+					@TempData["msg"]
+				</div>
+			}
+		</form>
+	</div>
+</body>
+</html>
