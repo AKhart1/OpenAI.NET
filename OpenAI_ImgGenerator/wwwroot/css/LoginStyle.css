@@ -1,0 +1,85 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+}
+
+.container {
+    max-width: 450px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+
+.logo {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.logo img {
+    position: relative;
+    width: 90%;
+    top: 40px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+input[type="email"],
+input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #404247;
+    color: #fff;
+    font-size: 1rem;
+}
+
+input[type="checkbox"] {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+label[for="remember"] {
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #1a73e8;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+    input[type="submit"]:hover {
+        background-color: #0f62fe;
+    }
+
+@media (max-width: 500px) {
+    .container {
+        padding: 1rem;
+    }
+}

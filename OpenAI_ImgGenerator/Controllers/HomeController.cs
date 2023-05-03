@@ -1,6 +1,6 @@
-﻿using DALLE_webapp.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using DALLE_webapp.Models;
 using System.Text;
 
 namespace DALLE_webapp.Controllers
@@ -17,6 +17,11 @@ namespace DALLE_webapp.Controllers
 
 
         public IActionResult Index()
+        {
+            return View();
+        }
+
+        public IActionResult Privacy()
         {
             return View();
         }
