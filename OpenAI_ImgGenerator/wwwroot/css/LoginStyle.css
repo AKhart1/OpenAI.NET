@@ -8,10 +8,10 @@ body {
     color: #fff;
 }
 
-.signInTxt{
+.signInTxt {
     display: block;
-    margin: 60px;
-
+    margin: 20px auto;
+    text-align: center;
 }
 
 .msg{
